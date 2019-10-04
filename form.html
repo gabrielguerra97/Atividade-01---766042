@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Formulário Web 2</title>
+        <link rel="stylesheet" type="text/css" href="css.css"/>
+        <meta charset="UTF-8">
+        <!--FUNÇÃO PARA VALIDAR SE A AREA = NOME DO ARQUIVO ESTÁ PREENCHIDO-->
+        <script type="text/javascript">
+            function validaFormulario()
+            {
+                var x=document.forms["formulario"]["nome"].value;
+                if(x==null||x==""){
+                    alert('Por favor, preencha o campo Nome do Arquivo');
+                    return false
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="fundo">
+        <!--CRIAÇÃO DE FORMULÁRIO PARA RECEBER DADOS VIA (POST)-->
+        <h1>Formulário para Cliente</h1>
+        <br>
+        <form action="php_form.php" name="formulario" method="POST" onsubmit="return validaFormulario()">
+            <h2>Código do Cliente: </h2>
+            <input type="number" name="codigo">
+            <br>
+            <h2>Nome do Arquivo: </h2>
+            <input type="text" name="nome">
+            <br>
+            <h2>Texto: </h2>
+            <textarea name="texto"></textarea>
+            <br>
+            <br>
+            <input type="submit" value="Confirmar" name="confirm">
+        </form>
+    </body>
+    </div>
+</html>

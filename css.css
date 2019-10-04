@@ -1,0 +1,19 @@
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+form{
+    text-align: center;
+}
+#fundo{
+    background-color:rgb(245, 240, 240);
+}
+textarea{
+    height: 100px;
+    width: 200px;
+}
+a{
+    text-align: center;
+}
